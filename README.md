@@ -30,7 +30,7 @@ The example below is just one possible layout, used for local testing — the wa
 
 ```
 Project/
-├── ts-runner-generator/     ← this tool
+├── autoscripTS/     ← this tool
 │   ├── package.json
 │   └── runGen.js
 ├── src/                     ← watched folder (target project's .ts files)
@@ -47,19 +47,19 @@ Project/
 1. Clone the repo:
 
    ```
-   git clone https://github.com/Guilherme-N-Melo/ts-runner-generator.git
+   git clone https://github.com/Guilherme-N-Melo/autoscripTS.git
    ```
 
 2. Place it alongside the project you want to manage, and adjust the watched folder and target `package.json` paths in `runGen.js` if your layout differs from the example above.
 
 ## Usage
 
-Navigate into the `ts-runner-generator` folder — this is required, since paths are currently resolved relative to the current working directory. Then start the watcher.
+Navigate into the `autoscripTS` folder — this is required, since paths are currently resolved relative to the current working directory. Then start the watcher.
 
 These commands are the same on any terminal — bash/zsh (Linux/macOS) or PowerShell/CMD (Windows):
 
 ```
-cd ts-runner-generator
+cd autoscripTS
 npm start
 ```
 
@@ -70,4 +70,4 @@ This runs `node runGen.js` under the hood. The process stays running in the term
 
 To stop the watcher, press `Ctrl+C` in the terminal where it's running.
 
-> ⚠️ **Important:** the command must be run from inside the `ts-runner-generator` folder. Running it from anywhere else will cause the relative paths to resolve incorrectly.
+> ⚠️ **Important:** the command must be run from inside the `autoscripTS` folder. Running it from anywhere else will cause the relative paths to resolve incorrectly.
