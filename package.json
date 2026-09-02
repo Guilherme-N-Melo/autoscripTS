@@ -1,20 +1,20 @@
 {
-  "name": "ts-runner-generator",
+  "name": "autoscript-ts",
   "version": "1.0.0",
   "description": "A DX tool that watches a project folder for .ts files and automatically syncs the corresponding entries in package.json's scripts section.",
-  "homepage": "https://github.com/Guilherme-N-Melo/ts-runner-generator#readme",
+  "homepage": "https://github.com/Guilherme-N-Melo/autoscripTS#readme",
   "bugs": {
-    "url": "https://github.com/Guilherme-N-Melo/ts-runner-generator/issues"
+    "url": "https://github.com/Guilherme-N-Melo/autoscripTS/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Guilherme-N-Melo/ts-runner-generator.git"
+    "url": "git+https://github.com/Guilherme-N-Melo/autoscripTS.git"
   },
   "license": "MIT",
   "author": "Guilherme Neves Melo",
   "type": "module",
   "main": "runGen.js",
   "scripts": {
-    "start": "runGen.js"
+    "start": "node runGen.js"
   }
 }
