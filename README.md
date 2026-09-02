@@ -1,4 +1,4 @@
-# ts-runner-generator
+# autoscripTS
 
 A Node.js developer-experience (DX) tool that watches a project folder for TypeScript files and automatically injects the corresponding commands into the `scripts` section of `package.json` — no more manual editing.
 
