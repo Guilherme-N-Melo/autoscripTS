@@ -11,15 +11,17 @@ let watcher = watch(fileScript, { recursive: true }, (eventType, filename) => {
 
   timer = setTimeout(() => {
     if (filename && filename.endsWith('.ts')) {
+      const normalizedFilename = filename.replaceAll('\\', '/');
       let fullPath = path.join(fileScript, filename);
-      let name = path.basename(filename, '.ts');
+      const withoutExt = normalizedFilename.slice(0, -'.ts'.length);
+      const name = withoutExt.split('/').join(':');
 
       let text = readFileSync(fileJSON, 'utf8');
       const jsonData = JSON.parse(text);
       jsonData.scripts = jsonData.scripts || {};
 
       if (existsSync(fullPath)) {
-        jsonData.scripts[name] = `tsx src/${filename}`;
+        jsonData.scripts[name] = `tsx src/${normalizedFilename}`;
       } else {
         delete jsonData.scripts[name];
       }
