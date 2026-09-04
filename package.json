@@ -13,8 +13,5 @@
   "license": "MIT",
   "author": "Guilherme Neves Melo",
   "type": "module",
-  "main": "runGen.js",
-  "scripts": {
-    "start": "node runGen.js"
-  }
+  "main": "runGen.js"
 }
