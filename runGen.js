@@ -1,8 +1,12 @@
 import { watch, existsSync, readFileSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-const fileScript = path.resolve("../src/");
-const fileJSON = path.resolve("../package.json");
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const fileScript = path.resolve(__dirname, "../src/");
+const fileJSON = path.resolve(__dirname, "../package.json");
 
 let timer;
 
@@ -30,5 +34,4 @@ let watcher = watch(fileScript, { recursive: true }, (eventType, filename) => {
     }
   }, 300);
 });
-
 
